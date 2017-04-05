@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrollmagic</title>
+    <style>
+        body {
+            background-color: #999;
+            padding: 20px;
+            background-image: linear-gradient(white 2px, transparent 2px),
+            linear-gradient(90deg, white 2px, transparent 2px),
+            linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+            background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+            background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px
+        }
+
+        .section {
+            height: 60vh;
+            background: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            color: #fff;
+            font-size: 40vh
+        }
+
+        .section:nth-child(2n) {
+            background: rgba(255, 255, 255, 0.3)
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .is-active {
+            transform: scale(2);
+            transition: all .2s linear;
+        }
+    </style>
+</head>
+<body>
+<div class="section a"><span id="toggleme">A</span></div>
+<div class="section b"><span id="pin">B</span></div>
+<div class="section c"><span id="animateme">C</span></div>
+<div class="section d">D</div>
+<div class="section d">D</div>
+<div class="section d">D</div>
+<div class="section d">D</div>
+<div class="section d">D</div>
+<div class="section d">D</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+<!-- TWEENMAX -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="http://scrollmagic.io/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+<!-- end TWEENMAX -->
+
+
+<script src="app.js"></script>
+</body>
+</html>
